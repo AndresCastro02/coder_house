@@ -167,7 +167,6 @@ footer{
     "logo inputsearch inputsearch user";
     column-gap: 3rem;
 }
-
 .img__logo{
     grid-area: logo;
 }
@@ -186,7 +185,7 @@ footer{
 }
 @keyframes zoom{
     from{
-        transform: rotate(360);
+        transform: rotate(0);
 
     }
     to{
@@ -256,6 +255,10 @@ form > input{
         transform: rotate(0g)
     }
 }
+.box__card{
+    padding-top: 25px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+}
 
 @media only screen  and (max-width: 541px){
     .conteiner__header{
@@ -303,5 +306,4 @@ form > input{
     .termsconditios{
         overflow: scroll;
     }
-
 }
