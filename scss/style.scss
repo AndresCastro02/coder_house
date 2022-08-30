@@ -1,3 +1,6 @@
+//componentes
+@import "scss/components.scss/components";
+
 *{
     padding: 0;
     margin: 0;
@@ -62,7 +65,7 @@ nav>ul>li>a:hover{
 
 .containers__cards__text--border{
     text-align: center;
-    background: gray;
+    background: $text_card--background;
     border: solid 2px gray;
     border-radius: 10px;
 
@@ -154,12 +157,7 @@ footer{
     padding: 30px;
 
 }
-.containers{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+
 
 
 .conteiner__header{
@@ -323,6 +321,29 @@ form{
 ul > li{
     list-style: none;
 }
+
+.btn--hoover:hover{
+    background: map-get($map:$button--addcarbackground, $key: back_color );
+    color: map-get($map:$button--addcarbackground, $key: color_text );
+    border: map-get($map:$button--addcarbackground , $key:border );
+}
+.section--carousel{
+    background: black;
+    width: 100%;
+}
+.img__caroulsel---size{
+  @include medidas(145px,100px);
+}
+.carousel--center{
+    text-align: center;
+}
+.oferts{
+    text-align: center;
+}
+.containers{
+    @extend %containers;
+}
+
 @media only screen  and (max-width: 541px){
     .conteiner__header{
         display: grid;

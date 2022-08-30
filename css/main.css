@@ -1,3 +1,9 @@
+.containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+
 * {
   padding: 0;
   margin: 0;
@@ -123,12 +129,6 @@ footer {
   background-color: #fbfbfb;
   height: 100vh;
   padding: 30px; }
-
-.containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap; }
 
 .conteiner__header {
   display: grid;
@@ -266,6 +266,25 @@ form {
 
 ul > li {
   list-style: none; }
+
+.btn--hoover:hover {
+  background: #ffc107;
+  color: black;
+  border: none; }
+
+.section--carousel {
+  background: black;
+  width: 100%; }
+
+.img__caroulsel---size {
+  width: 145px;
+  height: 100px; }
+
+.carousel--center {
+  text-align: center; }
+
+.oferts {
+  text-align: center; }
 
 @media only screen and (max-width: 541px) {
   .conteiner__header {

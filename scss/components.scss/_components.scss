@@ -1,0 +1,20 @@
+//componentes
+
+//map-get
+$button--addcarbackground: (back_color: #ffc107, color_text: black, border:none);
+
+
+//get
+@mixin medidas($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+$text_card--background: gray;
+
+%containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
