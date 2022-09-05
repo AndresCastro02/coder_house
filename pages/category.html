@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +7,11 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Home JS -->
+    <script src="../js/scrollreveal.js"></script>
+    <!-- Slick slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <!-- MI CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <title>Categoryes</title>
@@ -59,43 +63,108 @@
             </div>
         </div>
     </nav>
-    <main>
-        <h1>Ofertas</h1>
-        <div class="containers border__botton">
-            <div class="containers__cards--circle">
-                <img src="../img/gafa.png" alt="botas">
-                <div>
-                    <span class="containers__cards__text__descount">10%</span>
-                </div>
+    <main class="categorys">
+        <div class="categorys__products">
+            <img class="category__image" src="../img/trabajo_altura.png" alt="imagen alturas">
+            <div class="category__products--grids">
+                <h1 class="category__name">Alturas</h1>
+                <p class="category__descrition">Implementos ideales para el trabajo en alturas, la mejor proteccion para el activo mas importante de tu empresa</p>
             </div>
-            <div class="containers__cards--circle">
-                <img src="../img/casco.jpg" alt="botas">
-                <div>
-                    <span class="containers__cards__text__descount">10%</span>
-                </div>
-            </div>
-            <div class="containers__cards--circle">
-                <img src="../img/anticorte.png" alt="botas">
-                <div>
-                    <span class="containers__cards__text__descount">20%</span>
-                </div>
-            </div>
-            <div class="containers__cards--circle">
-                <img src="../img/pertigas.jpeg" alt="botas">
-                <div>
-                    <span class="containers__cards__text__descount">30%</span>
-                </div>
-            </div>
-            <div class="containers__cards--circle">
-                <img src="../img/botas.jpg" alt="botas">
-                <div class="">
-                    <span class="containers__cards__text__descount">40%</span>
-                </div>
-            </div>
-
         </div>
-        
+        <div class="categorys__products">
+            <img src="../img/proteccion-manual.png" alt="proteccion manual">
+            <div class="category__products--grids">
+                <h1 class="category__name">Proteccion Manual</h1>
+                <p class="category__descrition">Implementos para la proteccion de manos, guantes anti martilleo, guantes electricos</p>
+            </div>
+        </div>
+        <div class="categorys__products">
+            <img src="../img/proteccion-cabeza.png" alt="proteccion-cabeza">
+            <div class="category__products--grids">
+                <h1 class="category__name">Cascos</h1>
+                <p class="category__descrition">Reducen la fuerza de los impactos en la parte superior de la cabeza. - Tipo II: reducen la fuerza de los impactos tanto en la parte superior de la cabeza como en los laterales</p>
+            </div>
+        </div>
+        <div class="categorys__products">
+            <img src="../img/proteccion-auditiva-prosisoma.png" alt="proteccion-auditiva-prosisoma">
+            <div class="category__products--grids">
+                <h1 class="category__name">Cascos</h1>
+                <p class="category__descrition">Reducen la fuerza de los impactos en la parte superior de la cabeza. - Tipo II: reducen la fuerza de los impactos tanto en la parte superior de la cabeza como en los laterales</p>
+            </div>
+        </div>
+        <div class="categorys__products">
+            <img src="../img/otros-medicion.png" alt="otros-objetos-proteccion">
+            <div class="category__products--grids">
+                <h1 class="category__name">Cascos</h1>
+                <p class="category__descrition">Reducen la fuerza de los impactos en la parte superior de la cabeza. - Tipo II: reducen la fuerza de los impactos tanto en la parte superior de la cabeza como en los laterales</p>
+            </div>
+        </div>
+        <div class="categorys__products">
+            <img src="../img/proteccion-pies.png" alt="proteccion-pies">
+            <div class="category__products--grids">
+                <h1 class="category__name">Cascos</h1>
+                <p class="category__descrition">Reducen la fuerza de los impactos en la parte superior de la cabeza. - Tipo II: reducen la fuerza de los impactos tanto en la parte superior de la cabeza como en los laterales</p>
+            </div>
+        </div>
+        <div class="categorys__products">
+            <img src="../img/visual.png" alt="proteccion-visual">
+            <div class="category__products--grids">
+                <h1 class="category__name">Cascos</h1>
+                <p class="category__descrition">Reducen la fuerza de los impactos en la parte superior de la cabeza. - Tipo II: reducen la fuerza de los impactos tanto en la parte superior de la cabeza como en los laterales</p>
+            </div>
+        </div>
+        <div class="categorys__products">
+            <img src="../img/proteccion-respiratoria.png" alt="proteccion-visual">
+            <div class="category__products--grids">
+                <h1 class="category__name">Cascos</h1>
+                <p class="category__descrition">Reducen la fuerza de los impactos en la parte superior de la cabeza. - Tipo II: reducen la fuerza de los impactos tanto en la parte superior de la cabeza como en los laterales</p>
+            </div>
+        </div>
     </main>
+    <section class="brands">
+        <h2 class="mb-2 mt-2">Nuestros clientes</h2>
+        <div class="carrousel__container">
+            <button aria-label="Anterior" class="carrousel__anterior"><i class="fas fa-chevron-left"></i></button>
+            <div class="carrousel__brands">
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/chevrolet.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/ecopetrol.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+                <div class="brands__box">
+                    <img class="brands__images" src="/img/laika.png" alt="marcas">
+                </div>
+            </div>
+            <button aria-label="Anterior" class="carrousel__siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div role="tablist" class="carrousel__indicate"></div>
+    </section>
+
 
     <footer>
         <div class="socialitys">
@@ -108,10 +177,16 @@
         </p>
 
     </footer>
+    <!-- slick slider -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="../js/home.js"></script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

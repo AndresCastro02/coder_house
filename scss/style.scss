@@ -1,5 +1,6 @@
 //componentes
-@import "scss/components.scss/components";
+@import "components/components";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 *{
     padding: 0;
@@ -328,7 +329,7 @@ ul > li{
     border: map-get($map:$button--addcarbackground , $key:border );
 }
 .section--carousel{
-    background: black;
+    background: #c0bcb07a;
     width: 100%;
 }
 .img__caroulsel---size{
@@ -344,7 +345,128 @@ ul > li{
     @extend %containers;
 }
 
+.oferts__img{
+    @include sizes_images(80%)
+}
+.section__oferts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.price--old{
+    text-decoration: line-through;
+}
+.card__price--new{
+    color: $card--new--price;
+
+}
+.card-title{
+    color: $card--new--price;
+}
+
+.card{
+    cursor: pointer;
+}
+.card:hover{
+    border: 2px solid gray;
+
+}
+
+.text{
+    text-align: center;
+    justify-content: center;
+}
+.text h1{
+    margin-top:35px;
+    color: white;
+}
+.categorys{
+   @extend %containers
+}
+
+.category__products--grids{
+    @include ocultar
+}
+.categorys__products{
+    max-width: 500px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.categorys__products:hover{
+    border: 1px dashed gray;
+    border-radius: 15px;
+    padding: 10px;
+}
+.categorys__products:hover> .category__products--grids{
+    display: block;
+}
+.categorys__products{
+    img{
+        @include sizes_images(50%)
+    }
+}
+
+.brands__box{
+    @include medidas(250px,250px);
+    align-self: center;
+    border-radius: 15px;
+        .brands__images{
+            @include sizes_images(60%)
+            }
+}
+.carrousel__container{
+    position: relative;   
+}
+.carrousel__siguiente,
+.carrousel__anterior{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px) ;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #ec731e;
+    z-index: 1;
+}
+.carrousel__anterior{
+    left: 10px;
+}
+.carrousel__siguiente{
+    right: 10px;
+
+}
+
 @media only screen  and (max-width: 541px){
+    .categorys__products{
+        img{
+            width: 185px;
+        }
+    }
+    .categorys__products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "imagen namea"
+            "imagen  description";
+        column-gap: 1px;
+
+    }
+    .category__image{
+        grid-area: imagen;
+    }
+    .category__name{
+        grid-area: namea;
+    }
+    .category__descrition{
+        grid-area: description;
+        text-align: left;
+    }
     .conteiner__header{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -391,7 +513,35 @@ ul > li{
         overflow: scroll;
     }
 }
+@media only screen  and (max-width: 768px){
 
+    .categorys__products{
+        img{
+            width: 185px;
+        }
+    }
+    .categorys__products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "imagen namea"
+            "imagen  description";
+        column-gap: 1px;
+
+    }
+    .category__image{
+        grid-area: imagen;
+    }
+    .category__name{
+        grid-area: namea;
+    }
+    .category__descrition{
+        grid-area: description;
+        text-align: left;
+    }
+
+}
 @media only screen  and (max-width: 800px) {
     .contenedorslider{
         display: none;

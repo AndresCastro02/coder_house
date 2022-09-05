@@ -18,3 +18,13 @@ $text_card--background: gray;
     justify-content: center;
     flex-wrap: wrap;
 }
+
+@mixin sizes_images($width){
+    width: $width;
+}
+$card--new--price: #62ab00;
+
+
+@mixin ocultar {
+    display: none;
+}
