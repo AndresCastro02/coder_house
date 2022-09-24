@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="cascos, guantes, seguridad industrial, prevencion de riesgos, capacitaciones ">
-    <meta name="description" content="@yield('meta-description','Queremos que tu y los tuyos esten seguros y en CARE SECURITY encuentras todo. lienas de vida,seguridad,capacitaciones,prevencion de riesgos,equipos de seguridad y mucho más. Puedes pagar con cualquier forma de pago, incluso efectivo contra entrega. Recibe el mismo día.')"/>
+    <meta name="description"
+        content="@yield('meta-description','Queremos que tu y los tuyos esten seguros y en CARE SECURITY encuentras todo. lienas de vida,seguridad,capacitaciones,prevencion de riesgos,equipos de seguridad y mucho más. Puedes pagar con cualquier forma de pago, incluso efectivo contra entrega. Recibe el mismo día.')" />
     <meta name="author" content="CARE SECURITY">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/d0b455fc11.js" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -26,13 +30,12 @@
                 <input class="input__group--relative" type="text" placeholder="¿Que producto buscas?">
             </div>
             <div class="divs__acces__user">
-                <select class="acces__user--select" name="" id="">
-                    <option value="">Seleccione su direccion</option>
-                    <option value="">Argentina</option>
-                    <option value="">Colombia</option>
-                </select>
-                <img src="img/user1.png" alt="user">
-                <img src="img/basket.png" alt="carrito">
+                <button type="button" class="btn btn-primary user__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="user--size" src="img/user1.png" alt="userasd">
+                </button>
+                <button class="btn btn-primary user__btn user__btn--padding" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img 
+                        src="img/basket.png" alt="carrito"></button>
             </div>
         </div>
     </header>
@@ -45,27 +48,145 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Pagina Principal</a>
+                        <a class="nav-link " aria-current="page" href="index.html">Pagina Principal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="pages/category.html">Categorias</a>
+                        <a class="nav-link " href="pages/category.html">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="pages/contactanos.html">Contactanos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pages/profile.html">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pages/termsconditions.html">Terminos y Condiciones</a>
+                        <a class="nav-link " href="pages/profile.html">Perfil</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <section>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="canvas_card mb-3 p-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-4 div__images">
+                        <img src="img/casco.jpg" class="img-fluid rounded-start" alt="Casco">
+                      </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Casco de seguridad amarillo</h5>
+                                <p class="card-text">Casco de alta proteccion contra golpes, caidas, ajustable</p>
+                                <p class="card-text"><small class="text-muted">$150.000</small></p>
+                                <div class="quantitybtn__container mx-4 d-flex">
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="img/menos.png" alt="quitar producto">
+                                    </div>
+                                    <span class="d-flex">1</span>
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="img/masv2.png" alt="agregar producto" style="width: 21px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas_card mb-3 p-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-4 div__images">
+                        <img src="img/casco.jpg" class="img-fluid rounded-start" alt="Casco">
+                      </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Casco de seguridad amarillo</h5>
+                                <p class="card-text">Casco de alta proteccion contra golpes, caidas, ajustable</p>
+                                <p class="card-text"><small class="text-muted">$150.000</small></p>
+                                <div class="quantitybtn__container mx-4 d-flex">
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="img/menos.png" alt="quitar producto">
+                                    </div>
+                                    <span class="d-flex">1</span>
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="img/masv2.png" alt="agregar producto" style="width: 21px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas_card mb-3 p-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-4 div__images">
+                        <img src="img/arnes.jpeg" class="img-fluid rounded-start" alt="Casco">
+                      </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Arnes multiproposito de seguridad</h5>
+                                <p class="card-text">Arnes multiproposito, con linea de vida soporta hasta 150 kilos de peso probados en las condiciones mas extremas</p>
+                                <p class="card-text"><small class="text-muted">$180.000</small></p>
+                                <div class="quantitybtn__container mx-4 d-flex">
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="img/menos.png" alt="quitar producto">
+                                    </div>
+                                    <span class="d-flex">1</span>
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="img/masv2.png" alt="agregar producto" style="width: 21px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__footer">
+                <div class="col-10 mb-3">
+                    <button class="btn btn-primary button__get button__car" type="button">
+                        <span>
+                            Confirmar compra
+                        </span>
+                        <span>
+                            $150.000
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="border-radius:  20px;">
+                    <div class="modal-header border__botton--modal">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="modal-title" id="exampleModalLabel" style="text-align: center;">¡Bienvenido de nuevo!</h2>
+                        <form action="row g-3">
+                            <div class="form-floating mb-3 mt-2 col-12">
+                                <input type="email" class="form-control modal__input--color" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Correo</label>
+                            </div>
+                            <div class="form-floating mb-3 col-12">
+                                <input type="password" class="form-control modal__input--color" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Contraseña</label>
+                            </div>
+                            <div class="text-right ml-2 mr-2 mt-1 mb-2 col-12">
+                                <span class="cursor_pointer">¿Olvido su contraseña?</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button class="btn btn-primary button__get" type="button">Iniciar sesion</button>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary button__get--white" type="button">¿Cliente nuevo? Registrate aqui</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <main>
         <section class="section--carousel">
-            <div id="carouselExampleSlidesOnly" class="carousel slide carousel--center" data-bs-ride="carousel" style="display:block">
+            <div id="carouselExampleSlidesOnly" class="carousel slide carousel--center" data-bs-ride="carousel"
+                style="display:block">
                 <div class="carousel-inner ">
                     <div class="carousel-item active  carousel--space">
                         <img src="img/certificaciones.png" class="img__caroulsel---size" alt="imagen de carrusel">
@@ -97,77 +218,90 @@
 
         <h2 class="subtitle--size--colors">Productos:</h2>
         <div class="containers border__botton">
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/anticorte.png" alt="guante">
-                <p class="containers__cards__text--border containers__cards__text--size">Guantes</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/casco.jpg" alt="casco">
-                <p class="containers__cards__text--border containers__cards__text--size">Cascos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/gafa.png" alt="gafas">
-                <p class="containers__cards__text--border containers__cards__text--size">Gafas</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/ciza.jpg" alt="cizalla">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/botas.jpg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover ">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/chaquets.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Chaquetas</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/arnes.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Arnes</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-            <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
-                <img src="img/pertigas.jpeg" alt="botas">
-                <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
-                <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
-            </div>
-
+            <a href="pages/detail-products-gloves.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/anticorte.png" alt="guante">
+                    <p class="containers__cards__text--border containers__cards__text--size">Guantes</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover font_causten_round_semi_bold_oblique ">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-helmet.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/casco.jpg" alt="casco">
+                    <p class="containers__cards__text--border containers__cards__text--size ">Cascos</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-glasses.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/gafa.png" alt="gafas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Gafas</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-dielectricos.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/ciza.jpg" alt="cizalla">
+                    <p class="containers__cards__text--border containers__cards__text--size">Cizallas</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-botas.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/botas.jpg" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Botas</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover ">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-chaquets.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/chaquets.jpeg" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Chaquetas</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-arnes.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/arnes.jpeg" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Arnes</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-dielectricos_corp.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/pertigas.jpeg" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Dielectricos</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-tapabocas.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/tapabocas.png" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Tapabocas - Respirador</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-mascara.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/mascara.png" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Mascara soldador</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-protector.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/protector.jpeg" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Protector auditivo</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
+            <a href="pages/detail-products-mono.html" class="text__decoration">
+                <div class="containers__cards shadow-lg p-3 mb-5 bg-body rounded">
+                    <img src="img/corporal.jpeg" alt="botas">
+                    <p class="containers__cards__text--border containers__cards__text--size">Mono traje</p>
+                    <button type="button" class="btn btn-outline-primary btn--hoover">Agregar al Carrito</button>
+                </div>
+            </a>
         </div>
         <div class="oferts mb-5">
             <a href="#section__offerts">
@@ -178,14 +312,14 @@
             <div class="card mb-3 m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="img/arnes_rojo.jpeg" class="img-fluid rounded-start" alt="arnes descuento">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">-30%</h5>
-                            <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
-                            <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
+                            <h5 class="card-title">-10%</h5>
+                            <p class="card-text price--old"><small class="text-muted">$290.000</small></p>
+                            <h6 class="card__price--new">$280.000</h6>
+                            <p class="card-text">Arnés de rescate reflectivo HD (High Duration) de larga durabilidad</p>
                         </div>
                     </div>
                 </div>
@@ -193,14 +327,14 @@
             <div class="card mb-3 m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="producto imagen">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">-30%</h5>
                             <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
                             <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
+                            <p class="card-text">Arnes multiproposito sencillo</p>
                         </div>
                     </div>
                 </div>
@@ -208,14 +342,14 @@
             <div class="card mb-3 m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="img/tapabocas.png" class="img-fluid rounded-start" alt="producto imagen">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">-30%</h5>
-                            <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
-                            <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
+                            <h5 class="card-title">-20%</h5>
+                            <p class="card-text price--old"><small class="text-muted">$50.000</small></p>
+                            <h6 class="card__price--new">$30.000</h6>
+                            <p class="card-text">tapabocas con valvula de exhalacion para mayor confort.</p>
                         </div>
                     </div>
                 </div>
@@ -223,14 +357,14 @@
             <div class="card mb-3 m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="img/anticorte.png" class="img-fluid rounded-start" alt="producto imagen">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">-30%</h5>
                             <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
                             <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
+                            <p class="card-text">Guantes de seguridad, anticorte y proteccion contra golpes</p>
                         </div>
                     </div>
                 </div>
@@ -238,14 +372,14 @@
             <div class="card mb-3 m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="img/polea.jpeg" class="img-fluid rounded-start" alt="producto imagen">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">-30%</h5>
-                            <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
-                            <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
+                            <p class="card-text price--old"><small class="text-muted">$160.000</small></p>
+                            <h6 class="card__price--new">$140.000</h6>
+                            <p class="card-text">Polea de peso, aguanta hasta 110kg</p>
                         </div>
                     </div>
                 </div>
@@ -253,44 +387,14 @@
             <div class="card m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="img/lineavida.jpeg" class="img-fluid rounded-start" alt="producto imagen">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">-30%</h5>
-                            <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
-                            <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3 m-2" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">-30%</h5>
-                            <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
-                            <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3 m-2" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="img/arnesdescuento,jpeg.jpg" class="img-fluid rounded-start" alt="ofertas">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">-30%</h5>
-                            <p class="card-text price--old"><small class="text-muted">$150.000</small></p>
-                            <h6 class="card__price--new">$120.000</h6>
-                            <p class="card-text">Arnes multiproposito 402</p>
+                            <h5 class="card-title">-10%</h5>
+                            <p class="card-text price--old"><small class="text-muted">$110.000</small></p>
+                            <h6 class="card__price--new">$100.000</h6>
+                            <p class="card-text">Linea de vida con mosqueton</p>
                         </div>
                     </div>
                 </div>
@@ -298,19 +402,39 @@
         </section>
     </main>
     <footer>
-        <div class="socialitys">
-            <h3>Siguenos</h3>
-            <img class="socialitys__imgs--size" src="img/redes.png" alt="socials">
-            <img src="img/Imagen1.png" alt="logo">
+        <div class="row container__footer">
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 mb-2">
+                <div class="footer__title ms-2">
+                    <h3 class="font_causten_round_black_oblique">Siguenos:</h3>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/andres.parradocastro/">
+                        <img class="footer__social--medias" src="img/faceee.png" alt="facebook imagen">
+                    </a>
+                    <a href="https://www.instagram.com/andrescastro2793/">
+                        <img class="footer__social--medias" src="img/instagram.webp" alt="facebook imagen">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=573193575642">
+                        <img class="footer__social--medias" src="img/whatsapp.png" alt="facebook imagen">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-5 mb-2">
+                <img src="img/imagc1.jpeg" alt="logo" style="max-width: 340px;">
+            </div>  
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-4 mb-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.704273892872!2d-74.13910618523794!3d4.646740896624531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c12eba8cbb1%3A0xbb8f0a228e48b382!2sConjunto%20Residencial%20Parques%20De%20Castilla%208!5e0!3m2!1ses-419!2sco!4v1663909808275!5m2!1ses-419!2sco" width="240" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-
-        <p>
-            Teléfono: 300 884648 / Correo electrónico: caresecurity@security.com.co
-        </p>
-
+        <div class="colum">
+            <div class="col-12 ">
+                <p class="text__derechos">Copyright © 2022. Todos los derechos reservados</p>
+            </div>
+        </div>
+        
     </footer>
 
-   
+
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

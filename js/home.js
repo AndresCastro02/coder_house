@@ -5,13 +5,22 @@ window.sr = ScrollReveal();
     duration: 3000,
     origin: 'top',
     distance: '-100px'
-
   })
   sr.reveal('.brands', {
     duration: 4000,
-    origin: 'bottom',
+    origin: 'left',
     distance: '-100px'
 
+  })
+  sr.reveal('.card__detail',{
+    duration: 4000,
+    origin: 'left',
+    distance: '-100px'
+  })
+  sr.reveal('.profile__content',{
+    duration: 4000,
+    origin: 'left',
+    distance: '-100px'
   })
 
 window.addEventListener('load', function(){

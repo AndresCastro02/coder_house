@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/d0b455fc11.js" crossorigin="anonymous"></script>
+    <!-- Home JS -->
+    <script src="../js/scrollreveal.js"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -22,13 +26,12 @@
                 <input class="input__group--relative" type="text" placeholder="¿Que producto buscas?">
             </div>
             <div class="divs__acces__user">
-                <select class="acces__user--select" name="" id="">
-                    <option value="">Seleccione su direccion</option>
-                    <option value="">Argentina</option>
-                    <option value="">Colombia</option>
-                </select>
-                <img src="../img/user1.png" alt="user">
-                <img src="../img/basket.png" alt="carrito">
+                <button type="button" class="btn btn-primary user__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="user--size" src="../img/user1.png" alt="userasd">
+                </button>
+                <button class="btn btn-primary user__btn user__btn--padding" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img 
+                        src="../img/basket.png" alt="carrito"></button>
             </div>
 
         </div>
@@ -42,94 +45,370 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Pagina Principal</a>
+                        <a class="nav-link " aria-current="page" href="../index.html">Pagina Principal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="category.html">Categorias</a>
+                        <a class="nav-link " href="category.html">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contactanos.html">Contactanos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="profile.html">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="termsconditions.html">Terminos y Condiciones</a>
+                        <a class="nav-link " href="profile.html">Perfil</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main>
-        <section class="m-5">
-            <h1>¿Por que elegirnos?</h1>
-            <div class="contenedorslider">
-                <ul class="slider">
-                    <li id="slide1"><img src="../img/slider112.png"></li>
-                    <li id="slide2"> <img src="../img/slider113.png" /></li>
-                    <li id="slide3"><img src="../img/slider114.png" /></li>
-                </ul>
-                <ul class="men">
-                    <li>
-                        <a href="#slide1">1</a>
-                    </li>
-                    <li>
-                        <a href="#slide2">2</a>
-                    </li>
-                    <li>
-                        <a href="#slide3">3</a>
-                    </li>
-                </ul>
+    <section>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/slider112.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/slider113.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/slider114.png" class="d-block w-100" alt="...">
+            <div class="offcanvas-body">
+                <div class="canvas_card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-4 div__images">
+                        <img src="../img/casco.jpg" class="img-fluid rounded-start" alt="Casco">
+                      </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Casco de seguridad amarillo</h5>
+                                <p class="card-text">Casco de alta proteccion contra golpes, caidas, ajustable</p>
+                                <p class="card-text"><small class="text-muted">$150.000</small></p>
+                                <div class="quantitybtn__container mx-4 d-flex">
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="../img/menos.png" alt="quitar producto">
+                                    </div>
+                                    <span class="d-flex">1</span>
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="../img/masv2.png" alt="agregar producto" style="width: 21px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="canvas_card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-4 div__images">
+                        <img src="../img/arnes.jpeg" class="img-fluid rounded-start" alt="Casco">
+                      </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Casco de seguridad amarillo</h5>
+                                <p class="card-text">Casco de alta proteccion contra golpes, caidas, ajustable</p>
+                                <p class="card-text"><small class="text-muted">$150.000</small></p>
+                                <div class="quantitybtn__container mx-4 d-flex">
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="../img/menos.png" alt="quitar producto">
+                                    </div>
+                                    <span class="d-flex">1</span>
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="../img/masv2.png" alt="agregar producto" style="width: 21px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas_card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-4 div__images">
+                        <img src="../img/casco.jpg" class="img-fluid rounded-start" alt="Casco">
+                      </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Casco de seguridad amarillo</h5>
+                                <p class="card-text">Casco de alta proteccion contra golpes, caidas, ajustable</p>
+                                <p class="card-text"><small class="text-muted">$150.000</small></p>
+                                <div class="quantitybtn__container mx-4 d-flex">
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="../img/menos.png" alt="quitar producto">
+                                    </div>
+                                    <span class="d-flex">1</span>
+                                    <div class="quantitybtn__product opacity-05 d-flex">
+                                        <img class="delete_add_product" src="../img/masv2.png" alt="agregar producto" style="width: 21px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="canvas__footer">
+                <div class="col-10 mb-3">
+                    <button class="btn btn-primary button__get button__car" type="button">
+                        <span>
+                            Confirmar compra
+                        </span>
+                        <span>
+                            $150.000
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" style="border-radius:  20px;">
+                    <div class="modal-header border__botton--modal">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">¡Bienvenido de nuevo!</h5>
+                        <form action="row g-3">
+                            <div class="form-floating mb-3 mt-2 col-12">
+                                <input type="email" class="form-control modal__input--color" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Correo</label>
+                            </div>
+                            <div class="form-floating mb-3 col-12">
+                                <input type="password" class="form-control modal__input--color" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Contraseña</label>
+                            </div>
+                            <div class="text-right ml-2 mr-2 mt-1 mb-2 col-12">
+                                <span class="cursor_pointer">¿Olvido su contraseña?</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button class="btn btn-primary button__get" type="button">Iniciar sesion</button>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary button__get--white" type="button">¿Cliente nuevo? Registrate aqui</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="profile__content container mt-4 mb-5">
+        <div class="row m-auto px-0 px-md-4 px-xl-4 ">
+            <div class="profile__container col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-12 box-shadow">
+                <div>
+                    <div class="profile__container--image">
+                        <img class="profile_image" src="../img/profile.jpeg" alt="foto de perfil">
+                    </div>
+                    <div class="card-body py-0 text-center">
+                        <h1 class="profile__name color_purple">Nombre del usuario</h1>
+                        <h2 class="profile__email color_purple">correo@gmail.com</h2>
+                    </div>
+                </div>
+                <div class="profaile__container--items ">
+                    <div class="py-2">
+                        <a href="profile_configuration.html" class="text__decoration">
+                            <span class="color_purple">
+                                <i class="fas fa-user-circle fa-lg color_purple"></i>
+                                Configurar cuenta
+                            </span>
+                            
+                        </a>
+
+                    </div>
+                    <div class="py-2">
+                        <a href="" class="text__decoration">
+                            <span class="color_purple">
+                                <i class="fa-solid fa-address-card color_purple"></i>
+                            Membresia
+                            </span>
+                            
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <a href="profile.html" class="text__decoration">
+                            <span class="color_purple">
+                                <i class="fas fa-parachute-box fa-lg color_purple"></i>
+                            Hisotrial de pedidos
+                            </span>
+                        </a>
+
+                    </div>
+                    <div class="py-2">
+                        <a href="" class="text__decoration">
+                            <span class="color_purple">
+                                <i class="fa-brands fa-cc-mastercard color_purple"></i>
+                                Metodos de pago
+                            </span>
+                        </a>
+                    </div>  
+                </div>
+                <div class="">
+                    <div class="py-2">
+                        <a href="" class="text__decoration">
+                            <span class="color_purple">
+                                <i class="fas fa-headphones-alt fa-lg color_purple"></i>
+                                Soporte
+                            </span>
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <a href="" class="text__decoration">
+                            <span class="color_purple">
+                                <i class="fas fa-sign-out-alt fa-lg color_purple"></i>
+                                Cerrar sesion
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <img class="profile__logo" src="../img/imagc1.jpeg" alt="imagen logo">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-12 box-shadow profile__container">
+                <span>
+                    ¡Mis últimos pedidos!
+                </span>
+                <div class="row mx-0 shadow-sm rounded border mt-3">
+                    <div class="col-lg-6 col-xl-6 col-md-6">    
+                        <p>Pedido Nº 3038835</p>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-md-6">
+                        <span>Entregado</span>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                        <p>Fecha: 
+                            <span>2022-09-08 00:00:00</span>
+                        </p>
+                        <p>Horario:
+                            <span>12:00 PM - 4:00 PM</span> 
+                        </p>
+                        <p>Productos:
+                            <span> Cizalla, Arnes</span>
+                        </p>
+                        <p>Total:
+                            <span>250.000</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                    <button>Vovler a pedir</button>
+                    <button>Generar factura</button>
+                    </div>
+                </div>
+                <div class="row mx-0 shadow-sm rounded border mt-3">
+                    <div class="col-lg-6 col-xl-6 col-md-6">    
+                        <p>Pedido Nº 3038835</p>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-md-6">
+                        <span>Entregado</span>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                        <p>Fecha: 
+                            <span>2022-09-08 00:00:00</span>
+                        </p>
+                        <p>Horario:
+                            <span>12:00 PM - 4:00 PM</span> 
+                        </p>
+                        <p>Productos:
+                            <span> Cizalla, Arnes</span>
+                        </p>
+                        <p>Total:
+                            <span>250.000</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                    <button>Vovler a pedir</button>
+                    <button>Generar factura</button>
+                    </div>
+                </div>
+                <div class="row mx-0 shadow-sm rounded border mt-3">
+                    <div class="col-lg-6 col-xl-6 col-md-6">    
+                        <p>Pedido Nº 3038835</p>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-md-6">
+                        <span>Entregado</span>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                        <p>Fecha: 
+                            <span>2022-09-08 00:00:00</span>
+                        </p>
+                        <p>Horario:
+                            <span>12:00 PM - 4:00 PM</span> 
+                        </p>
+                        <p>Productos:
+                            <span> Cizalla, Arnes</span>
+                        </p>
+                        <p>Total:
+                            <span>250.000</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                    <button>Vovler a pedir</button>
+                    <button>Generar factura</button>
+                    </div>
+                </div>
+                <div class="row mx-0 shadow-sm rounded border mt-3">
+                    <div class="col-lg-6 col-xl-6 col-md-6">    
+                        <p>Pedido Nº 3038835</p>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-md-6">
+                        <span>Entregado</span>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                        <p>Fecha: 
+                            <span>2022-09-08 00:00:00</span>
+                        </p>
+                        <p>Horario:
+                            <span>12:00 PM - 4:00 PM</span> 
+                        </p>
+                        <p>Productos:
+                            <span> Cizalla, Arnes</span>
+                        </p>
+                        <p>Total:
+                            <span>250.000</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-xl-12 col-md-12">
+                    <button>Vovler a pedir</button>
+                    <button>Generar factura</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
     </main>
     <footer>
-        <div class="socialitys">
-            <h3>Siguenos</h3>
-            <img class="socialitys__imgs--size" src="../img/redes.png" alt="socials">
-            <img src="../img/Imagen1.png" alt="logo">
+        <div class="row container__footer">
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 mb-2">
+                <div class="footer__title">
+                    <h3 class="font_causten_round_black_oblique">Siguenos:</h3>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/andres.parradocastro/">
+                        <img class="footer__social--medias" src="../img/faceee.png" alt="facebook imagen">
+                    </a>
+                    <a href="https://www.instagram.com/andrescastro2793/">
+                        <img class="footer__social--medias" src="../img/instagram.webp" alt="facebook imagen">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=573193575642">
+                        <img class="footer__social--medias" src="../img/whatsapp.png" alt="facebook imagen">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-5 mb-2">
+                <img src="../img/imagc1.jpeg" alt="logo" style="max-width: 340px;">
+            </div>  
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-4 mb-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.704273892872!2d-74.13910618523794!3d4.646740896624531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c12eba8cbb1%3A0xbb8f0a228e48b382!2sConjunto%20Residencial%20Parques%20De%20Castilla%208!5e0!3m2!1ses-419!2sco!4v1663909808275!5m2!1ses-419!2sco" width="240" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-        <p>
-            Teléfono: 300 884648 / Correo electrónico: caresecurity@security.com.co
-        </p>
-
+        <div class="colum">
+            <div class="col-12 ">
+                <p class="text__derechos">Copyright © 2022. Todos los derechos reservados</p>
+            </div>
+        </div>
+        
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous">
-    </script>
-
+     <!-- slick slider -->
+     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+     <script src="../js/home.js"></script>
+     <!-- Font awesome -->
+     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+         crossorigin="anonymous">
+     </script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 //componentes
 
 //map-get
-$button--addcarbackground: (back_color: #ffc107, color_text: black, border:none);
+$button--addcarbackground: (back_color: #ffc107, color_text: black, border:none, borders_apply:1px solid #ffc107);
 
 
 //get
@@ -9,6 +9,8 @@ $button--addcarbackground: (back_color: #ffc107, color_text: black, border:none)
     width: $width;
     height: $height;
 }
+$boton_get--color: #6610f2;
+$cursor_pointer: pointer;
 
 $text_card--background: gray;
 
@@ -16,6 +18,19 @@ $text_card--background: gray;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+}
+%input_profile{
+    background: #E9ECEF;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    padding: 0 30px;
+    background-position-y: center;
+}
+
+%flex-footer{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -28,3 +43,9 @@ $card--new--price: #62ab00;
 @mixin ocultar {
     display: none;
 }
+%user__btn {
+    border-radius: 20px;
+}
+$padding--images--buttoms:(padding-user:3px, padding-car:6px);
+
+$price--old: #d43737;
